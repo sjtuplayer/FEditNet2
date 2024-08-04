@@ -4,11 +4,11 @@
 ###  [Paper](https://ieeexplore.ieee.org/document/10607942) | [Suppl](10.1109/TPAMI.2024.3432529/mm1)
 
 <!-- <br> -->
-[Ran Yi](https://yiranran.github.io/),
-[Teng Hu](https://github.com/sjtuplayer),
-[Mengfei Xia](https://github.com/thuxmf), 
-[Yizhe Tang](https://github.com/YevinTang),
- and [Yongjin Liu](https://cg.cs.tsinghua.edu.cn/people/~Yongjin/Yongjin.htm),
+[Ran Yi](https://scholar.google.com/citations?hl=zh-CN&user=y68DLo4AAAAJ),
+[Teng Hu](https://scholar.google.com/citations?hl=zh-CN&user=Jm5qsAYAAAAJ),
+[Mengfei Xia](https://scholar.google.com/citations?hl=zh-CN&user=jmOlxQ0AAAAJ), 
+[Yizhe Tang](https://github.com/sjtuplayer/FEditNet2),
+ and [Yong-Jin Liu](https://scholar.google.com.hk/citations?hl=zh-CN&user=GNDtwWQAAAAJ),
 <!-- <br> -->
 
 ![image](imgs/framework.png)
