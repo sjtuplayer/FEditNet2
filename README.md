@@ -17,7 +17,12 @@
 # Prepare
 
 ```bash
-pip install requirements.txt
+pip install pytorch==1.13.1
+pip install torchvision==0.14.1
+pip install opencv-python==4.7.0.72
+pip install numpy==1.23.1
+pip install pillow==9.4.0
+pip install tqdm==4.65.0
 ```
 
 
@@ -31,44 +36,44 @@ Data prepare: schedule the dataset as:
 
 ```angular2html
 - dataset
-    - $attr1
-        - 0.png
-        - 1.png
-        - ...
-    - $attr2
-        - 0.png
-        - 1.png
-        - ...
-    - ...
+    - celeba-test
+      - $attr1
+          - 0.png
+          - 1.png
+          - ...
+      - $attr2
+          - 0.png
+          - 1.png
+          - ...
+      - ...
 
 ```
 where `$attri` if the name for the ith attribute, e.g., Smile, Old.
-### (1) Train FEditNet++ to disentangle two attributes
+### (1) Train FEditNet
 
-To train train the model on tow attributes `attri` and `attrj`, you can run:
+To train the model on one attributes `attr`, you can run:
 
 ```
-python3 train_editnet.py --attr1=$attri --attr2=$attrj
+python3 train_editnet.py --name=$attr
 ```
 
-### (2) Test the trained model
+### (2) Train FEditNet++ to disentangle two attributes
+
+To train the model on two attributes `attri` and `attrj`, you can run:
+
+```
+python3 train_editnet2.py --attr1=$attri --attr2=$attrj
+```
+
+### (3) Test the trained model
 
 After training the model, you can generate image by running:
 ```
 python3 test-decoupled_generator.py --attr=$attri-$attrj
 ```
 
-[//]: # (With the trained coarse-stage model, you can train the refinement-stage model by running:)
+### TODO: decouple on three attributes
 
-[//]: # ()
-[//]: # (```)
-
-[//]: # (python3 main_refine --data_path=$path_to_the_dataset)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (After training, the checkpoints and logs are saved in the directory `output_refine`.)
 
 ## Citation
 
